@@ -1,0 +1,19 @@
+<h3>Users</h3>
+<table>
+    <th>
+    <td>firstname</td>
+    <td>lastname</td>
+    <td>age</td>
+    <td>emailid</td>
+    </th>
+    <% @users.each do |user| %>
+    <tr>
+        <td><%= user.first_name%></td>
+        <td><%= user.last_name%></td>
+        <td><%= user.age%></td>
+        <td><%= user.email_id%></td>  
+    </tr>
+    <%end%>
+</table>
+
+<%= link_to "New User", new_user_path %>
